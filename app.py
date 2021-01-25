@@ -1,5 +1,5 @@
 from flask import Flask, request, redirect, render_template, url_for
-from static.py.parse_realtive import static
+from parse_realtive import static
 from class_folder.inputs_class import Inputs
 
 
