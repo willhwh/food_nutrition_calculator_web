@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Page</title>
+</head>
+<body>
+    <h1>Welcome to Food Page!</h1>
+    <h3>Please Fill the Information Below.</h3>
+    <!--Need to deal with ' and "-->
+    <!--Need to add yes and no return to meal term page"-->
+    
+
+    <form method = 'post'>
+        <label>Selected Restaurant:</label><br>
+        <input name='select_restaurant' value= {{select_restaurant}} readonly><hr>
+        <label>Please confirm your meal.</label><br>
+        <select id='meal' autofocus> 
+            <option value = 'Default'> Select Your Meal </option> 
+            {% set list1 = meal_names.replace(',','').replace('[','').replace(']','').split("'") %}
+            {% for meal_name in list1 %}
+                {% if meal_name|length > 1 %}
+                <option>      
+                {{meal_name}}
+                </option>
+                {% endif %} 
+            {% endfor %} 
+        </select><br><br>
+        <button type="button" onclick="meal_check()"> Confirm</button><br><hr>
+        <label>Selected Meal:</label><br>
+        <input name = 'select_meal'  id = 'select_meal' readonly><br><br>
+        <button type="submit">Add Meal</button>
+    </form>
+
+    <script src='/static/js/check.js'></script>
+</body>
+</html>

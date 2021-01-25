@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Page</title>
+</head>
+<body>
+    <h1>Welcome to Food Page!</h1>
+
+    <h3>Please Fill the Information Below.</h3>
+    
+    <form method ="POST"> <!--all the inputs should be put under form then can be passed-->
+        <label>Selected Restaurant: </label><br>
+        <input name = 'select_restaurant' id = 'select_restaurant' value = {{select_restaurant}} readonly><br><br>
+        <label>Selected Meal: </label><br>
+        <input name = 'select_meal' id = 'select_meal'readonly value = "{{select_meal|string}}"><br><br>
+        <hr>
+        <h3>Nutrition Intaken</h3>
+        <label>Calories.</label><br>
+        <input name = "calories" id = "calories" readonly value = "{{calories}}">kal<br><br>
+        <label>Proteins.</label><br>
+        <input name = "proteins" id = "proteins" readonly value = "{{proteins}}">g<br><br>
+        <label>Fat.</label><br>
+        <input name = "fat" id = "fat" readonly value= "{{fat}}">g<br><br>
+        <label>Carbs.</label><br>
+        <input name = "carbs" id = "carbs" readonly value ="{{carbs}}">g<br><br>
+        <button autofocus>Add to Database</button>
+        <button>Add Another Meal</button>
+        <button>View Charts</button>
+    </form>
+
+    <script src='../static/js/check.js'></script>
+</body>
+</html>
