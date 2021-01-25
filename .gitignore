@@ -1,0 +1,13 @@
+# =================== User-Added ===================
+config.js
+*/config.js
+
+config.py
+*/config.py
+
+.DS_Store
+*.DS_Store
+
+*.icloud
+
+*checkpoint.ipynb
